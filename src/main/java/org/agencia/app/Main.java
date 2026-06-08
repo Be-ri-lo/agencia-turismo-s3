@@ -9,8 +9,17 @@ import org.agencia.util.RutValidador;
 
 import java.time.LocalDate;
 
+/**
+ * Punto de entrada de la aplicación de la agencia de turismo.
+ * Simula dos escenarios de tours y valida los RUT de los participantes.
+ */
 public class Main {
 
+    /**
+     * Ejecuta la simulación de tours gastronómico y de aventura.
+     *
+     * @param args argumentos de línea de comandos (no utilizados)
+     */
     public static void main(String[] args) {
 
         // -----------------------------------------------------------------
@@ -18,6 +27,7 @@ public class Main {
         // -----------------------------------------------------------------
         System.out.println("AGENCIA DE TURISMO LLANQUIHUE");
         try {
+            //Guia
             Guia guia1 = new Guia(
                     "Carlos",
                     "Andrade",
@@ -29,6 +39,7 @@ public class Main {
             //validar rut Guia
             RutValidador.validarRut(guia1.getRut());
 
+            //Proveedor
             Proveedor provGastronomia = new Proveedor(
                     "René",
                     "Gallardo",
@@ -70,7 +81,7 @@ public class Main {
             //validar rut Guia
             RutValidador.validarRut(guia2.getRut());
 
-            // Un proveedor de un rubro totalmente distinto (Transporte/Aventura) y en otra comuna
+            // Un proveedor de otro rubro y en otra localidad
             Proveedor provAventura = new Proveedor(
                     "Verónica",
                     "Ruiz",
@@ -84,7 +95,7 @@ public class Main {
             provAventura.setLugar("Saltos del Petrohué");
             provAventura.setTipoDeServicio("Aventura (Rafting en Río Petrohué)");
 
-            // Un cliente que representa otro perfil (un turista de la tercera edad o extranjero)
+            //Otro cliente
             Cliente clienteAventurero = new Cliente(
                     "Hans",
                     "Müller",
@@ -112,5 +123,3 @@ public class Main {
         }
     }
 }
-
-

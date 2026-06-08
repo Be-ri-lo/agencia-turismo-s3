@@ -94,7 +94,7 @@ Si algún RUT no cumple el formato válido (`XXXXXXXX-Y`), se capturará la exce
 ---
 
 **Repositorio GitHub:** https://github.com/Be-ri-lo/agencia-turismo-s3
-**Fecha de entrega:** \[DD/MM/2025]
+**Fecha de entrega:** \[08/06/2026]
 
 ---
 
